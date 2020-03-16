@@ -1,0 +1,42 @@
+---
+bg: kits
+layout: page
+permalink: /refactoring
+title: "重构专栏"
+summary: 重构专栏
+
+active: "重构"
+
+---
+
+<h1>重构100问</h1>
+
+<!--<div class="archive-toc-top">-->
+<!--  {% for page in site.pages limit: 200 %}-->
+<!--  {% if page.tag == 'refactoring' %}-->
+<!--  <a href="{{post.url}}" class="selected">{{ page.title }}</a> &nbsp;&nbsp;-->
+<!--  {% endif %}-->
+<!--  {% endfor %}-->
+<!--</div>-->
+
+<div class="archive-content">
+  <ul class="categories">
+    {% for post in site.pages %}
+    {% if post.tag == 'refactoring' %}
+    <li>
+      <a href="{{ post.url }}">{{ post.title }}</a>
+    </li>
+    {% endif %}
+    {% endfor %}
+  </ul>
+</div>
+
+  如果你在练习和实践重构的过程中有遇到过其他任何疑惑，欢迎你在评论区提出你的疑惑。
+
+  你的问题将会被收录，作为大家讨论的主题，集思广益，以期望帮你答疑解惑。
+
+  谢谢你的支持！
+
+{% include comments.html %}
+
+{% include refactoring-100-toc.html %}

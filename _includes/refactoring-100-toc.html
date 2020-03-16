@@ -1,0 +1,14 @@
+<div class="archive-toc">
+  <div class="title"><h4>重构100问</h4></div>
+  <div class="separator">
+    <hr/>
+  </div>
+  <div class="content">
+    {% for post in site.pages %}
+    {% if post.tag == 'refactoring' %}
+    <ul><a href="{{ post.url }}">{{ post.title }}</a></ul>
+    {% endif %}
+    {% endfor %}
+  </div>
+</div>
+
