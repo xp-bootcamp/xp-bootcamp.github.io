@@ -1,15 +1,14 @@
 ---
 bg: kits
 layout: page
-permalink: /refactoring
-title: "重构专栏"
-summary: 重构专栏
+permalink: /tdd
+title: "TDD专栏"
+summary: TDD专栏
 
-active: "重构"
-
+active: "TDD"
 ---
 
-<h1>重构100问</h1>
+<h1>TDD 100问</h1>
 
 <!--<div class="archive-toc-top">-->
 <!--  {% for page in site.pages limit: 200 %}-->
@@ -22,7 +21,7 @@ active: "重构"
 <div class="archive-content">
   <ul class="categories">
     {% for post in site.pages %}
-    {% if post.tag == 'refactoring' %}
+    {% if post.tag == 'tdd' %}
     <li>
       <a href="{{ post.url }}">{{ post.title }}</a>
     </li>
@@ -39,4 +38,4 @@ active: "重构"
 
 {% include comments.html %}
 
-{% include refactoring-100-toc.html %}
+{% include tdd-100-toc.html %}
