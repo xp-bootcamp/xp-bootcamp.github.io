@@ -247,11 +247,7 @@ hr {
   }
 }
 
-.post-toc, .archive-toc{
-  display: none;
-}
-
-#markdown-toc {
+#sjyuan.clubwn-toc {
   font-size: 15px;
   list-style: none;
   margin-left: -35px;
@@ -300,7 +296,10 @@ hr {
   a:hover {
     color: #a59816;
   }
+}
 
+#markdown-toc{
+  display: none;
 }
 
 #selected {
@@ -392,10 +391,11 @@ hr {
     height: 100%;
     overflow-y: scroll;
     position: fixed;
-    top: 0;
+    top: 50px;
     left: 0;
+    bottom: 50px;
     background-color: #fafaf9;
-    width: $aside-width;
+    width: 25%;
 
     .title, .separator {
       margin-left: 40px;

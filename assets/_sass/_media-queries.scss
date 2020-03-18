@@ -111,10 +111,6 @@
     display: block;
   }
 
-  .main-header {
-    position: static;
-  }
-
   .nav-main {
     padding: 0;
     text-align: left;
@@ -142,9 +138,10 @@
   }
 
   .content-wrapper {
-    width: $content-wrapper-width;
-    max-width: $article-max-width;
-    margin-left: $post-margin-left;
+    margin-top: 50px;
+    width: 62%;
+    max-width: 720px;
+    margin-left: 27%;
   }
 
   main {
@@ -152,9 +149,6 @@
   }
 
   .blog-footer {
-    width: $content-wrapper-width;
-    max-width: $article-max-width;
-    margin-left: $post-margin-left;
   }
 
   .post-links {

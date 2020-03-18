@@ -71,12 +71,13 @@ a {
 * Header
 * ========================================================================== */
 .main-header {
-  background-color: #fdfdfd;
+  background-color: #433434;
+  //background-color: #433434;
+  //background-color: #268bd2;
   position: fixed;
   z-index: 100;
   width: 100%;
   top: 0;
-  border-bottom: 1px solid #ddd;
 }
 
 /*
@@ -103,13 +104,13 @@ a {
     order: 1;
     line-height: 50px;
     margin: auto;
-    color: #333;
+    color: white;
     text-decoration: none;
 
     &:hover,
     &:focus,
     &:active {
-      color: #766257;
+      color: #4397f2;
     }
   }
 }

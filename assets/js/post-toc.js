@@ -1,6 +1,5 @@
 $(document).ready(function () {
   generatePostNavigation();
-  enableTocToggle();
   initTocStatus();
 });
 
@@ -10,32 +9,6 @@ function generatePostNavigation() {
     $('.post-toc').hide();
   } else {
     $('.post-toc .content').html('<ul>' + $('#markdown-toc').html() + '</ul>');
-  }
-}
-
-function enableTocToggle() {
-  if ($(window).width() > 960) {
-    $(window).scroll(function () {
-      var toc = $(".post-content #markdown-toc");
-      if (!toc.position()) {
-        toc = $(".archive-toc-top");
-        $(".archive-toc").css("display", "block");
-      }
-      if (toc && toc.position()) {
-        if ($(window).scrollTop() > toc.position().top + toc.height()) {
-          $(".sidebar").fadeOut(950);
-          $(".post-toc").css("display", "block");
-          $(".archive-toc").css("display", "block");
-        } else {
-          $(".sidebar").fadeIn(950);
-          $(".post-toc").css("display", "none");
-          $(".archive-toc").css("display", "none");
-        }
-      }
-    });
-  } else {
-    $(".post-toc").css("display", "none");
-    $(".archive-toc").css("display", "none");
   }
 }
 
