@@ -4,9 +4,9 @@
     <hr/>
   </div>
   <div class="content">
-    {% for post in site.pages %}
-    {% if post.tag == 'refactoring' %}
-    <ul><a href="{{ post.url }}">{{ post.title }}</a></ul>
+    {% for page in site.pages %}
+    {% if page.tag == 'refactoring' %}
+    <ul><a href="{{ post.url }}">{{ page.title }}</a></ul>
     {% endif %}
     {% endfor %}
   </div>
