@@ -5,7 +5,11 @@ layout: default
 <article class="post">
 
   <h1 class="post-title">{{ page.title }}</h1>
-
+  {% for tag in page.tags %}
+  <span class="badge badge-tag">
+      <a href="{{ site.url | append: '/archives#' | append: tag | downcase }}">{{ tag }}</a>
+    </span>
+  {% endfor %}
   <p class="post-meta">
     <time datetime="{{ page.date | date: "%Y-%m-%d" }}">{{ page.date | date: "%Y-%m-%d" }}</time>
 
