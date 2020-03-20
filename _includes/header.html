@@ -1,14 +1,15 @@
 <header class="main-header">
 
-  <input type="checkbox" id="menu-checkbox" />
+  <input type="checkbox" id="menu-checkbox"/>
 
-  <nav class="center-wrapper nav-main">
+  <nav class="nav-main">
+    <div class="xp-logo"><img src="{{ site.baseurl }}/assets/images/site/xp_logo_white.png"></div>
     <a class="blog-logo" href="{{ site.baseurl }}/">{{ site.title }}</a>
 
     {% for page in site.pages %}
-      {% if page.active %}
-        <a href="{{ page.url | prepend: site.baseurl }}">{{ page.active }}</a>
-      {% endif %}
+    {% if page.active %}
+    <a href="{{ page.url | prepend: site.baseurl }}">{{ page.active }}</a>
+    {% endif %}
     {% endfor %}
 
     <!--<a href="{{ "/feed.xml" | prepend: site.baseurl }}">RSS</a>-->
