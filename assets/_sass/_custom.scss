@@ -262,11 +262,6 @@ hr {
   }
 }
 
-.archive-toc {
-  ul{
-    line-height:20px;
-  }
-}
 .archive-content, .archive-toc-top {
   padding: 1em 1em;
 }
@@ -285,6 +280,12 @@ hr {
   }
 }
 
+.archive-toc {
+  ul{
+    line-height:20px;
+  }
+  display: none;
+}
 .post-toc, .archive-toc {
   font-size: 15px;
   ul {
@@ -304,6 +305,8 @@ hr {
 
 #selected {
   color: #a59816;
+  border-left: 3px #a59816 solid;
+  padding-left: 3px;
 }
 
 #unselected {
@@ -396,6 +399,7 @@ hr {
     bottom: 50px;
     background-color: #fafaf9;
     width: 25%;
+    display: block;
 
     .title, .separator {
       margin-left: 40px;
