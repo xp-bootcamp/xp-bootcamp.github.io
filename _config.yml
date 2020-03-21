@@ -6,6 +6,7 @@ permalink: /:title/
 url: https://xpbootcamp.cn
 img_path: /assets/images
 image_path_post: /assets/images/post
+image_path_column: /assets/images/column
 
 author:
   name: 袁慎建
