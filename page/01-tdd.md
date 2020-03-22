@@ -52,11 +52,58 @@ Given When Then借鉴了BBD（Behavior Driven Development）里面的模式，�
 
 
 ### Test-Driven Development
-测试驱动开发，有了拆分好的一个个Task，此时需要将这些Task用测试用例代码进行翻译，
+测试驱动开发，有了上一步Tasking过程中，拆分好的一系列Task，经过一些沟通澄清之后，就可以将这些Task翻译成测试。在翻译的过程中需要注意的一个核心点是 -- 保持业务概念的统一（统一语言的应用）。如何理解这一点呢，来个看一个Task：
+
+> Given 一个有空位的停车场，When 停车，Then 停车成功，返回一张票据
+
+翻译成测试代码后：
+
+```java
+@Test
+void should_return_ticket_when_parking_given_a_parking_lot_has_available_space(){
+	ParkingLot parkinglot = new ParkingLot(1);
+	String car = "布加迪"
+	String ticket = parkinglot.park(car);
+	assertNotNull(ticket)
+}
+```
+在上述测试代码中，car和ticket都是用了字符串来表示（基本类型偏执），车和票据这两个业务概念没有体现出来，建议是使用`Car`和`Ticket`来代替这两个业务概念。
+
+极限的TDD中，会将以终为始运用到极限。提倡在写测试用力的时候，先写断言，然后一步一步往前倒逼驱动出来测试代码，比如上述的例子，经历的过程如下：
+
+```java
+{
+	assertNotNull(ticket)
+}
+
+{
+	Ticker ticket = parkinglot.park(car);
+	assertNotNull(ticket)
+}
+
+{
+	Car car = new Car();
+	Ticker ticket = parkinglot.park(car);
+	assertNotNull(ticket)
+}
+
+@Test
+void should_return_ticket_when_parking_given_a_parking_lot_has_available_space()
+{
+	ParkingLot parkinglot = new ParkingLot(1);
+	Car car = new Car();
+	Ticker ticket = parkinglot.park(car);
+	assertNotNull(ticket)
+}
+```
+
+这种方式在开始是很难做到的，但是通过多次可以练习，形成这种行为习惯，内化成思维习惯，也是益处多多的，非常建议去刻意练习。
 
 
 ### Test-Driven Design
 > TDD并不会驱动出好的设计，TDD只会给你及时的反馈什么可能是糟糕的设计 -- Kent Beck
+
+在《百问TDD》中有一个问题能够很好地解释这一点，它是[测试如何驱动设计？]({{ site.url | append: '/tdd/questions/001'}})
 
 
 ## 为什么要 TDD？
