@@ -14,7 +14,7 @@ active: "TDD"
 
 ## 什么是 TDD？
 
-测试驱动开发是一种软件开发过程，源于1999年Kent Beck《Extreme Programming Explained》一书中的测试先行这一概念。Kent Beck在2003年再次提到 -- TDD鼓励简单的设计并激发信心。经过后期的发展，TDD已经成长为一门独立的软件开发技术，其名气甚至盖过了极限编程。
+测试驱动开发是一种软件开发实践，源于1999年Kent Beck《Extreme Programming Explained》一书中的测试先行这一概念。Kent Beck在2003年再次提到 -- TDD鼓励简单的设计并激发信心。经过后期的发展，TDD已经成长为一门独立的软件开发技术，其名气甚至盖过了极限编程。
 
 {% include column-image.html name = 'xp-circle.png' %}
 
