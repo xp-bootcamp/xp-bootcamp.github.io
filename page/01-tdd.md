@@ -13,11 +13,13 @@ active: "TDD"
 
 
 ## 什么是 TDD？
-TDD，Test Driven Development，由极限编程创始人Kent Beck提出，它是XP（eXtreme Programming，极限编程）中的一项核心实践。
+
+测试驱动开发是一种软件开发过程，源于1999年Kent Beck《Extreme Programming Explained》一书中的测试先行这一概念。Kent Beck在2003年再次提到 -- TDD鼓励简单的设计并激发信心。经过后期的发展，TDD已经成长为一门独立的软件开发技术，其名气甚至盖过了极限编程。
 
 {% include column-image.html name = 'xp-circle.png' %}
 
-TDD 采用了一种以终为始的思维方式，在开发业务功能代码之前，先编写测试代码。测试代码确定了我们要验收什么以及如何验收，然后再去编写功能代码，当测试通过时，便代表功能完成。
+
+TDD采用了一种以终为始的思维方式，它依赖于非常短的开发周期的重复：先将需求转换为非常具体的测试用例，然后改进代码，从而让测试通过。实际编码过程体现为：在开发业务功能代码之前，先编写测试代码。测试代码确定了我们要验收什么以及如何验收，然后再去编写功能代码，当测试通过时，代表功能完成。
 
 在实践过程中，人们常常将TDD区分为广义TDD和狭义TDD。广义的TDD是ATDD（Acceptance Test Driven Development），狭义的TDD，常常说的是UTDD（Unit Test Driven Development）。
 本文所说的TDD更多指狭义上的TDD。
@@ -185,4 +187,8 @@ TDD的一个必然结果产生是高价值、高覆盖的单元测试，为功�
 - [《实例化需求》](https://book.douban.com/subject/11611022/)
 - [《重构：改善既有代码的设计》](https://book.douban.com/subject/4262627/)
 
+
+## 参考阅读
+- [eXtreme Programming](https://en.wikipedia.org/wiki/Extreme_programming)
+- [Test Driven Development](https://en.wikipedia.org/wiki/Test-driven_development)
 
