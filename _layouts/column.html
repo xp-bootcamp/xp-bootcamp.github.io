@@ -28,9 +28,9 @@ layout: default
 
   </div>
 
-  {% if page.tag == 'refactoring' %}
+  {% if page.tag == 'refactoring-question-100' or page.tag == 'refactoring' %}
     {% include refactoring-100-toc.html %}
-  {% elsif page.tag == 'tdd' %}
+  {% elsif page.tag == 'tdd-question-100' or page.tag == 'tdd' %}
     {% include tdd-100-toc.html %}
   {% endif %}
   {% include post-toc.html %}

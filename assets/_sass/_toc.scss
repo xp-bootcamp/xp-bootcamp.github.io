@@ -5,31 +5,39 @@
 .archive-toc-top {
   padding-left: 20px;
   font-size: 14px;
+
   a {
     text-decoration: none;
   }
+
   a:hover {
     color: #a58b0c;
   }
+
   #selected {
     color: #a53848;
   }
 }
 
 .archive-toc {
-  ul{
-    line-height:20px;
+  ul {
+    line-height: 20px;
   }
+
   display: none;
 }
+
 .post-toc, .archive-toc {
-  h4{
+  h4 {
     font-size: 16px;
   }
+
   font-size: 15px;
+
   ul {
     list-style: none;
   }
+
   a {
     text-decoration: none;
   }
@@ -39,7 +47,7 @@
   }
 }
 
-#markdown-toc{
+#markdown-toc {
   display: none;
 }
 
@@ -55,7 +63,7 @@
 }
 
 @media screen and (min-width: $break-point) {
-  .post-toc,.archive-toc{
+  .post-toc, .archive-toc {
     max-height: 100%;
     height: 100%;
     overflow-y: scroll;
@@ -68,15 +76,21 @@
     display: block;
 
     .title, .separator {
-      margin-left: 40px;
+      margin-left: 20px;
       margin-right: 20px;
     }
+
     .content {
       margin-top: 10px;
-      margin-right: 20px;
+      margin-right: 15px;
     }
+
+    li {
+      margin-left: -20px;
+    }
+
   }
-  .archive-toc{
+  .archive-toc {
     left: 0;
   }
 }
