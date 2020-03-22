@@ -36,13 +36,13 @@ TDD 采用了一种以终为始的思维方式，在开发业务功能代码之�
 2. 假定用户名正确且密码错误时，当用户登录，则登录失败
 3. 假定用户名和密码都正确时，当用户登录，登录成功
 
-通过上面的三个Tasking，可以总结出一个模式：Given | When | Then：
+通过上面的三个Tasking，可以总结出一个模式：Given When Then：
 
 1. Given 用户名不存在，When 用户登录， Then 登录失败
 2. Given 用户名正确且密码错误，When 用户登录， Then 登录失败
 3. Given 用户名和密码都正确，When 用户登录， Then 登录成功
 
-Given | When | Then借鉴了BBD（Behavior Driven Development）里面的模式，它更加关注用户如何使用系统，即系统所提供的功能，从理解上更偏向于业务语言。对于一些技术人员，在初学阶段，需要多去练习，体会不同点，可以选业务人员视角索要一些反馈。
+Given When Then借鉴了BBD（Behavior Driven Development）里面的模式，它更加关注用户如何使用系统，即系统所提供的功能，从理解上更偏向于业务语言。对于一些技术人员，在初学阶段，需要多去练习，体会不同点，可以选业务人员视角索要一些反馈。
 
 在TDD中，我将之称为Tasking三步曲：
 
