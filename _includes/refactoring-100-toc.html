@@ -1,12 +1,20 @@
 <div class="archive-toc">
-  <div class="title"><h4>重构100问</h4></div>
+  <div class="title"><h4>百问重构</h4></div>
   <div class="separator">
     <hr/>
   </div>
   <div class="content">
-    {% for page in site.pages %}
-    {% if page.tag == 'refactoring' %}
-    <ul><a href="{{ post.url }}">{{ page.title }}</a></ul>
+    {% assign index = 1 %}
+    {% assign prefix = '' %}
+    {% for post in site.pages %}
+    {% if post.tag == 'refactoring-question-100' %}
+    {% if index < 10 %}
+    {% assign prefix = '00' | append: index %}
+    {% elsif index < 100 %}
+    {% assign prefix = '0' | append: index %}
+    {% endif %}
+    <ul><a href="{{ post.url }}">{{prefix | append: '：' |append: post.title }}</a></ul>
+    {% assign index = index | plus: 1 %}
     {% endif %}
     {% endfor %}
   </div>
