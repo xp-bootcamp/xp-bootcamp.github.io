@@ -76,27 +76,26 @@ void should_return_ticket_when_parking_given_a_parking_lot_has_available_space()
 ```java
 {
 	// 1. 我最终要验收的是停车票，代表停车成功
-	assertNotNull(ticket); 
+	assertNotNull(ticket);
 }
 
 {
 	// 2. 停车票是停车后返回的
-	Ticker ticket = parkinglot.park(car); 
+	Ticker ticket = parkinglot.park(car);
 	assertNotNull(ticket)
 }
 
 {
 	// 3. 停的车是我新开进来的车
-	Car car = new Car();  
-	Ticker ticket = parkinglot.park(car); 
+	Car car = new Car();
+	Ticker ticket = parkinglot.park(car);
 	assertNotNull(ticket)
 }
 
 @Test
-void should_return_ticket_when_parking_given_a_parking_lot_has_available_space()
-{
+void should_return_ticket_when_parking_given_a_parking_lot_has_available_space() {
 	// 4. 停进了有空位的停车场
-	ParkingLot parkinglot = new ParkingLot(1); 
+	ParkingLot parkinglot = new ParkingLot(1);
 	Car car = new Car();
 	Ticker ticket = parkinglot.park(car);
 	assertNotNull(ticket)
